@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 
 public class MyStack {
     private int Size;
-    private List<Integer> elements;
+    public List<Integer> elements;
 
     public MyStack()
     {
