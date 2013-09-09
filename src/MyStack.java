@@ -24,15 +24,19 @@ public class MyStack {
 
     public void push(int el)
     {
-        if(elements.size() + 1 > Size)
-        {
-             pop();
-        }
+        if(elements.size() + 1 >= Size)
+            throw new StackOverflowError();
+
+        System.out.println("Pushed:");
+        System.out.println(el);
         this.elements.add(el);
     }
 
     public  void  pop()
     {
+        if(elements.size() == 0)
+            throw  new EmptyStackException();
+
         System.out.println("Poped:");
         System.out.println(elements.get(elements.size()-1));
         elements.remove(elements.size()-1);

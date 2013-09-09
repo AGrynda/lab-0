@@ -9,15 +9,20 @@ import java.io.IOException;
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-        MyStack stack = new MyStack();
-        stack.push(1);
-        stack.push(2);
-        stack.push(3);
-        stack.push(4);
-        stack.push(5);
-        stack.push(6);
-        stack.push(7);
-        stack.printStack();
+        try {
+            MyStack stack = new MyStack();
+            stack.push(1);
+            stack.push(2);
+            stack.push(3);
+            stack.push(4);
+            stack.push(5);
+            stack.push(6);
+            stack.push(7);
+            stack.printStack();
+        }
+          catch (Exception e)
+          {
+              System.out.println(e.getMessage());
+          }
     }
 }
